@@ -1,55 +1,65 @@
 [
     {
-        "id": "d8cbcbf2b83350cc",
+        "id": "57aed5159c2e3347",
         "type": "tab",
         "label": "Flow 1",
         "disabled": false,
-        "info": "",
+        "info": "[{\"id\":\"55dd0376.f7c64c\",\"type\":\"http in\",\"z\":\"3af82246.3634ae\",\"name\":\"\",\"url\":\"/hello\",\"method\":\"get\",\"upload\":false,\"swaggerDoc\":\"\",\"x\":130,\"y\":420,\"wires\":[[\"c656aba7.944288\"]]},{\"id\":\"c2380ca8.0463\",\"type\":\"http response\",\"z\":\"3af82246.3634ae\",\"name\":\"\",\"statusCode\":\"\",\"headers\":{},\"x\":470,\"y\":420,\"wires\":[]},{\"id\":\"c656aba7.944288\",\"type\":\"change\",\"z\":\"3af82246.3634ae\",\"name\":\"\",\"rules\":[{\"t\":\"set\",\"p\":\"payload\",\"pt\":\"msg\",\"to\":\"{\\\"text\\\":\\\"Hello\\\"}\",\"tot\":\"json\"}],\"action\":\"\",\"property\":\"\",\"from\":\"\",\"to\":\"\",\"reg\":false,\"x\":300,\"y\":420,\"wires\":[[\"c2380ca8.0463\"]]}]",
         "env": []
     },
     {
-        "id": "3ccd52c0161d4427",
-        "type": "inject",
-        "z": "d8cbcbf2b83350cc",
+        "id": "55dd0376.f7c64c",
+        "type": "http in",
+        "z": "57aed5159c2e3347",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 160,
-        "y": 180,
+        "url": "/hello",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 160,
         "wires": [
             [
-                "f686f94713fd3595"
+                "c656aba7.944288"
             ]
         ]
     },
     {
-        "id": "f686f94713fd3595",
-        "type": "debug",
-        "z": "d8cbcbf2b83350cc",
+        "id": "c2380ca8.0463",
+        "type": "http response",
+        "z": "57aed5159c2e3347",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 480,
-        "y": 260,
+        "statusCode": "",
+        "headers": {},
+        "x": 540,
+        "y": 160,
         "wires": []
+    },
+    {
+        "id": "c656aba7.944288",
+        "type": "change",
+        "z": "57aed5159c2e3347",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"text\":\"Hello World\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "c2380ca8.0463"
+            ]
+        ]
     }
 ]
