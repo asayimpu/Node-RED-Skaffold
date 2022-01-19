@@ -45,7 +45,7 @@
                 "t": "set",
                 "p": "payload",
                 "pt": "msg",
-                "to": "{\"text\":\"Hello World from skaffold \"}",
+                "to": "{\"text\":\"Hello World \"}",
                 "tot": "json"
             }
         ],
